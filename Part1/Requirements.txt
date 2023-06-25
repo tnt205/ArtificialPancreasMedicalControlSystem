@@ -1,0 +1,22 @@
+README
+
+Steps to Execute Code:
+1. STEP 1: DEFINE FUNCTIONS: find_automode and data_cleaning
+• Function find_automode: Find the time Auto mode start.The function find_automod() will read 3 columns Date, Time, and Alarm of the data Insulin. Keep only Alarm with 'AUTO MODE ACTIVE PLGM OFF' and return the earliest time this change happened. 
+• Function data_cleaning: This function will drop all rows have missing value and drop all days have less than 288 segments. For the days have more than 288 segments, only first 288 rows will be kept, there rest of the data will be excluded.
+2. STEP 2: DATA MANIPULATION: In this step, we will do some work below:
+• Step 2a: load Insulin Data and find the time auto mode starts
+• Step 2b: Load CGM data and cleaning, drop missing value and over collected
+• Step 2c: Creating some categorical variables for estimation
+3. STEP 3: ESTIMATION
+• A list name result will be created to store output values. This list will have dimension 2x18 with 1st row is manual mode and 2nd row is auto mode
+• To estimate the output values, the data will be filtered by mode type, daytime type. All cgm categories will be aggregate percent value of each day. The mean value of percent of whole data will be estimate and append to result list.
+• Convert result list to DataFrame and write to Results.csv file
+
+NOTE: [add any necessary notes]
+Link to resource(s) [if/as needed]
+
+Further step-by-step instructions if/as needed
+
+
+
